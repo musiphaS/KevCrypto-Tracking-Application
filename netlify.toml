@@ -1,12 +1,2 @@
 [build]
-  publish = "build"
-  command = "npm vite build"
-  base = "."
-
-[site]
-  name = "kevcrypto"
-
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
+  command = "vite build"
