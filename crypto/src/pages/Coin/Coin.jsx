@@ -83,4 +83,4 @@ const Coin = () => {
 
 }
 
-export default Coin
+export default Coin;
