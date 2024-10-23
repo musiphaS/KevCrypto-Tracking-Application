@@ -24,11 +24,11 @@ const CoinContextProvider = (props) => {
         } catch (err) {
             console.error(err);
         }
-    }, [currency]); // Memoize fetchAllCoin with currency.name as a dependency
+    }, [currency]);
 
     useEffect(() => {
         fetchAllCoin();
-    }, [currency, fetchAllCoin]); // Now fetchAllCoin is included in the dependency array
+    }, [currency, fetchAllCoin]); 
 
     const contextValue = {
         allCoin, currency, setCurrency
