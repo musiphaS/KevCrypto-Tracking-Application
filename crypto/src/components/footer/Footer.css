@@ -1,0 +1,9 @@
+.footer {
+    text-align: center;
+    margin: auto;
+    max-width: 80%;
+    /* border-top: 1 px solid #989898; please try to look for ways to replace this border-top and use other methods */
+    padding: 15px 0px;
+    font-size: 13px;
+}
+

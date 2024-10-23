@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --bg-color: #f0f0f0;
+  --text-color: #222325;
+  --cbg: #f5f5f5;
+  --input-bg: #fff;
+  --button-bg: #222325;
+  --button-color: #fff;
+  --swatch-bg: #fff;
+  --swatch-text: #333;
+  --swatch-shadow: rgba(0, 0, 0, 0.1);
+  --icon-color: #222325;
+  --switch-bg: #ccc;
+  --switch-knob: #fff;
+  --light-gray: #999;
+}
+
+[data-theme="dark"] {
+  --cbg: #222325;
+  --bg-color: #222325;
+  --text-color: #fff;
+  --input-bg: #333;
+  --button-bg: #fff;
+  --button-color: #222325;
+  --swatch-bg: #fff;
+  --swatch-text: #333;
+  --swatch-shadow: rgba(0, 0, 0, 0.2);
+  --icon-color: #222325;
+  --switch-bg: #fff;
+  --switch-knob: #222325;
+  --light-gray: #777;
+}
+
+.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.theme-switcher {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switcher input {
+  display: none;
+}
+
+.slider-rounded {
+  background-color: var(--switch-bg);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-rounded:before {
+  background-color: var(--switch-knob);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  border-radius: 50%;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked+.slider {
+  background-color: var(--switch-bg);
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.theme-wrap .fa-sun {
+  margin-right: 7px;
+}
+
+.theme-wrap .fa-moon {
+  margin-right: 7px;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
