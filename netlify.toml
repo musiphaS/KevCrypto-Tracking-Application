@@ -1,0 +1,11 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+
+[site]
+  name = "kevcrypto"
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
