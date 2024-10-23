@@ -1,6 +1,7 @@
 [build]
   publish = "build"
   command = "npm vite build"
+  base = "."
 
 [site]
   name = "kevcrypto"
