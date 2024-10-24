@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['axios']
+      external: ['axios', '@fortawesome/free-solid-svg-icons']
     }
   }
 })
