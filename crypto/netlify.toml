@@ -1,7 +1,3 @@
-[build]
-  publish = "build"    # replace with your build output directory
-  command = "npm run build"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
