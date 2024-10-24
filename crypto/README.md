@@ -1,8 +1,25 @@
-# React + Vite
+# KevCrypto-Tracking-Application
+KevCrypto is a modern cryptocurrency tracking application built with React that provides real-time cryptocurrency data, price charts, and market information. Users can monitor their favorite cryptocurrencies, view detailed statistics, and track market trends with an intuitive interface.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Key Features
+- Real-time cryptocurrency price tracking
+- Interactive price charts with 7-day historical data
+- Currency conversion between USD and EUR
+- Dark/Light mode theme switcher
+- Search functionality for quick coin lookup
+- Detailed coin stats including :
+    - Market cap
+    - Current price
+    - 24 Hour price change
+    - Market rank
+- responsive design for all devices
+- top 20 cryptocurrencies dashboard
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies used
+- React.js
+- React Router for easy navigation
+- Context API for state management
+- CoinGecko API for cryptocurrency data
+- React Google Charts for data visualization
+- CSS for styling
+- Axios for API request

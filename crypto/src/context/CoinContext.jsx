@@ -1,20 +1,25 @@
 import { createContext, useEffect, useState, useCallback } from "react";
 import PropTypes from 'prop-types';
 
-export const CoinContext = createContext();
+export const CoinContext = createContext(); // creating a new context
 
 const CoinContextProvider = (props) => {
 
+    // state for all coins and currency
     const [allCoin, setAllCoin] = useState([]);
     const [currency, setCurrency] = useState({
         name: "USD",
         symbol: "$"
     });
 
+    // fetch coin data from API
     const fetchAllCoin = useCallback(async () => {
         const options = {
             method: 'GET',
-            headers: { accept: 'application/json', 'x-cg-demo-api-key': 'CG-WKZ7gKdWWPDDTJvmPmmDsTsy' }
+            headers: { 
+                accept: 'application/json', 
+                'x-cg-demo-api-key': 'CG-WKZ7gKdWWPDDTJvmPmmDsTsy'
+            }
         };
 
         try {
@@ -26,14 +31,17 @@ const CoinContextProvider = (props) => {
         }
     }, [currency]);
 
+    // fetch coins when currency changes
     useEffect(() => {
         fetchAllCoin();
     }, [currency, fetchAllCoin]); 
 
+    // this is data we going to use to share with all components
     const contextValue = {
         allCoin, currency, setCurrency
     };
 
+    // make data available to chils components
     return (
         <CoinContext.Provider value={contextValue}>
             {props.children}
@@ -41,6 +49,7 @@ const CoinContextProvider = (props) => {
     );
 };
 
+// type checking for children prop
 CoinContextProvider.propTypes = {
     children: PropTypes.node.isRequired
 };

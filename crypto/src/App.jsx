@@ -1,4 +1,3 @@
-// import React from 'react'
 import Navbar from './components/navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -11,7 +10,7 @@ const App = () => {
     <div className='app'>
       <div className="dark-mode">
       <Navbar />
-      <Routes>
+      <Routes> 
         < Route path='/' element={<Home />} />
         < Route path='/coin/:coinId' element={<Coin />} />
       </Routes>
