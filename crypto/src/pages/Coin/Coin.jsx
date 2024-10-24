@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import './Coin.css'
+import './Coin.css';
 import { useParams } from 'react-router-dom' // we can find the coin id using url
 import { CoinContext } from '../../context/CoinContext';
 import LineChart from '../../components/linechart/LineChart';
