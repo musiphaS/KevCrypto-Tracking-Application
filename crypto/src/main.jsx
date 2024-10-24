@@ -7,12 +7,14 @@ import CoinContextProvider from './context/CoinContext.jsx'
 
 createRoot(document.getElementById('root')).render(  //this line grabs the 'root' element from HTML
   // helps catch common mistakes
-  <React.StrictMode>
+  <StrictMode>
      {/* enables page navigation */}
+    <HashRouter>
       {/* makes cryptocurrency data avaliable everywhere */}
       <CoinContextProvider>
         {/* app is the main application */}
           <App />        
       </CoinContextProvider>
-  </React.StrictMode>,
+    </HashRouter>
+  </StrictMode>,
 )
